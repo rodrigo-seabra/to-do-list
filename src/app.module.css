@@ -6,13 +6,42 @@
     font-family: 'Holtwood One SC', serif;
     border: none  ;
   }
+
+
+
+  /* change theme*/
+  :root{
+    --body_bk: rgb(255,255,255);
+    --color: rgb(0, 0, 0);
+    --bk_list:rgb(255, 255, 255);
+    --bk_list_color: rgb(0, 0, 0);
+    --filter: ;
+
+
+  }
+  [theme="dark"]{
+    --body_bk: rgb(0,0,0);
+    --color: white;
+    --bk_list: rgb(0, 0, 0);
+    --bk_list_color: rgb(255, 255, 255);
+    --filter: invert();
+
+  }
+
+
+  img{
+    filter: var(--filter);
+  }
   body{
-    background-color: #3AC6F5;
+    background: var(--body_bk);
     height: 100vh;
     padding-top: 1rem;
   }
     header {
-        text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 5em;
+      align-items: center;
     }
     .sessaoheader {
       display: flex;
@@ -20,7 +49,7 @@
       gap: 2rem;
     }
     header h1 {      
-      color: #EDB532;
+      color:var(--color);
       font-size: 36px;
     }
     .addTask{
@@ -28,14 +57,39 @@
       flex-direction: column;
       gap: 2rem;
     }
-    .addTask button {
-      width: 10%;
-      height: 3rem;
-      margin: 0 auto;
-      border-radius: 50px;
-      color: rgba(255, 255, 255, 0.77);
-      background-color: #553EED;
+
+    /*Button add*/
+    .OrgButton{
+      text-align: center;
     }
+    .comic-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff5252;
+      border: 2px solid #000;
+      border-radius: 10px;
+      box-shadow: 5px 5px 0px #000;
+      transition: all 0.3s ease;
+      scale: 0.9;
+    }
+    .comic-button:hover {
+      background-color: #fff;
+      color: #ff5252;
+      border: 2px solid #ff5252;
+      box-shadow: 5px 5px 0px #ff5252;
+      scale: 1;
+    }
+    .comic-button:active {
+      background-color: #fcf414;
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+
     .listaTasks {
       display: flex;
       align-items: center;
@@ -44,12 +98,12 @@
     .listaTasks ul {
       width: 30%;
       margin: 0 auto;
-      background-color: #553EED;
+      background-color: var(--bk_list);
       border-radius: 20px;
       padding: 0.5rem;
     }
     .listaTasks ul span {
-      color: #EDB532;
+      color: var(--bk_list_color);
       font-size: 20px;
     }
     .listaTasks ul {
@@ -65,6 +119,7 @@
       background-color: transparent
     }
     .listaTasks ul li {
+      color: var(--bk_list_color);
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -100,7 +155,7 @@
     }
 @media screen and (min-width: 375px) and (max-width:1440px){
   body{
-    background-color: #3AC6F5;
+    background: var(--body_bk);
     height: 100vh;
     padding-top: 1rem;
   }
@@ -113,7 +168,7 @@
       gap: 2rem;
     }
     header h1 {      
-      color: #EDB532;
+      color: var(--color);
       font-size: 36px;
     }
     .addTask{
@@ -137,12 +192,12 @@
     .listaTasks ul {
       width: 80%;
       margin: 0 auto;
-      background-color: #553EED;
+      background-color:var(--bk_list);
       border-radius: 20px;
       padding: 0.5rem;
     }
     .listaTasks ul span {
-      color: #EDB532;
+      color: var(--bk_list_color);
       font-size: 20px;
     }
     .listaTasks ul {
@@ -195,7 +250,7 @@
 }
 @media screen and (min-width: 768px) and (max-width:1024px){
   body{
-    background-color: #3AC6F5;
+    background-color:var(--body_bk);
     height: 100vh;
     padding-top: 1rem;
   }
@@ -208,7 +263,7 @@
       gap: 2rem;
     }
     header h1 {      
-      color: #EDB532;
+      color: var(--color);
       font-size: 36px;
     }
     .addTask{
@@ -232,12 +287,12 @@
     .listaTasks ul {
       width: 60%;
       margin: 0 auto;
-      background-color: #553EED;
+      background-color:var(--bk_list);
       border-radius: 20px;
       padding: 0.5rem;
     }
     .listaTasks ul span {
-      color: #EDB532;
+      color: var(--bk_list_color);
       font-size: 20px;
     }
     .listaTasks ul {
@@ -289,7 +344,7 @@
 }
 @media screen and (min-width: 1439px){
   body{
-    background-color: #3AC6F5;
+    background: var(--body_bk);
     height: 100vh;
     padding-top: 1rem;
   }
@@ -302,7 +357,7 @@
       gap: 2rem;
     }
     header h1 {      
-      color: #EDB532;
+      color: var(--color);
       font-size: 36px;
     }
     .addTask{
@@ -310,14 +365,42 @@
       flex-direction: column;
       gap: 2rem;
     }
-    .addTask button {
-      width: 10%;
-      height: 3rem;
-      margin: 0 auto;
-      border-radius: 50px;
-      color: rgba(255, 255, 255, 0.77);
-      background-color: #553EED;
+
+
+    /*Button add*/
+    .OrgButton{
+      text-align: center;
     }
+    .comicButton {
+      width: 20%;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #ff5252;
+      border: 2px solid #000;
+      border-radius: 10px;
+      box-shadow: 5px 5px 0px #000;
+      transition: all 0.3s ease;
+      scale: 0.9;
+    }
+    .comicButton:hover {
+      background-color: #fff;
+      color: #ff5252;
+      border: 2px solid #ff5252;
+      box-shadow: 5px 5px 0px #ff5252;
+      scale: 1;
+    }
+    .comicButton:active {
+      background-color: #fcf414;
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+  
+
     .listaTasks {
       display: flex;
       align-items: center;
@@ -326,12 +409,12 @@
     .listaTasks ul {
       width: 50%;
       margin: 0 auto;
-      background-color: #553EED;
+      background-color: var(--bk_list);
       border-radius: 20px;
       padding: 0.5rem;
     }
     .listaTasks ul span {
-      color: #EDB532;
+      color:var(--bk_list_color);
       font-size: 20px;
     }
     .listaTasks ul {
