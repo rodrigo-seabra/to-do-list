@@ -81,7 +81,7 @@
   }
 }
 
-@media screen  and (min-width: 375px)  and (max-width: 767px){
+@media screen  and (min-width: 360px)  and (max-width: 767px){
   .themeswitch {
     --toggle-size: 20px;
     /* the size is adjusted using font-size,

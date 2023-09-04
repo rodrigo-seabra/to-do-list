@@ -1,466 +1,661 @@
 * {
-    padding:0;
-    margin:0;
-    vertical-align:baseline;
-    list-style:none;
-    font-family: 'Holtwood One SC', serif;
-    border: none  ;
-  }
-
-
-
-  /* change theme*/
-  :root{
-    --body_bk: rgb(255,255,255);
-    --color: rgb(0, 0, 0);
-    --bk_list:rgb(255, 255, 255);
-    --bk_list_color: rgb(0, 0, 0);
-    --filter: ;
-
-
-  }
-  [theme="dark"]{
-    --body_bk: rgb(0,0,0);
-    --color: white;
-    --bk_list: rgb(0, 0, 0);
-    --bk_list_color: rgb(255, 255, 255);
-    --filter: invert();
-
-  }
-
-
-  img{
-    filter: var(--filter);
-  }
-  body{
-    background: var(--body_bk);
-    height: 100vh;
-    padding-top: 1rem;
-  }
-    header {
-      display: flex;
-      justify-content: center;
-      gap: 5em;
-      align-items: center;
-    }
-    .sessaoheader {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    header h1 {      
-      color:var(--color);
-      font-size: 36px;
-    }
-    .addTask{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    /*Button add*/
-    .OrgButton{
-      text-align: center;
-    }
-    .comic-button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      background-color: #ff5252;
-      border: 2px solid #000;
-      border-radius: 10px;
-      box-shadow: 5px 5px 0px #000;
-      transition: all 0.3s ease;
-      scale: 0.9;
-    }
-    .comic-button:hover {
-      background-color: #fff;
-      color: #ff5252;
-      border: 2px solid #ff5252;
-      box-shadow: 5px 5px 0px #ff5252;
-      scale: 1;
-    }
-    .comic-button:active {
-      background-color: #fcf414;
-      box-shadow: none;
-      transform: translateY(4px);
-    }
-
-    .listaTasks {
-      display: flex;
-      align-items: center;
-      margin-top: 1.3rem;
-    }
-    .listaTasks ul {
-      width: 30%;
-      margin: 0 auto;
-      background-color: var(--bk_list);
-      border-radius: 20px;
-      padding: 0.5rem;
-    }
-    .listaTasks ul span {
-      color: var(--bk_list_color);
-      font-size: 20px;
-    }
-    .listaTasks ul {
-      display: flex;
-      flex-direction: column;
-    }
-    .seta {
-      width: 18px;
-      height: 9px;
-      background-color: transparent;
-    }
-    .listaTasks ul li button {
-      background-color: transparent
-    }
-    .listaTasks ul li {
-      color: var(--bk_list_color);
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      word-break: break-word;
-    }
-    .divbuttons{
-      display: flex;
-      flex-direction: row;
-      gap: 0.3rem;
-    }
-    .inputwrapper input {
-      background-color: #eee;
-      border: none;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 1rem;
-      color: lightcoral;
-      box-shadow: 0 0.4rem #dfd9d9;
-      cursor: pointer;
-    }
-    .inputwrapper {
-      margin: 0 auto;
-    }
-    .inputwrapper input:focus {
-      outline-color: lightcoral;
-    }
-    .risco {
-      text-decoration: line-through;
-    }
-    .semrisco{
-      text-decoration: none;
-    }
-@media screen and (min-width: 375px) and (max-width:1440px){
-  body{
-    background: var(--body_bk);
-    height: 100vh;
-    padding-top: 1rem;
-  }
-    header {
-        text-align: center;
-    }
-    .sessaoheader {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    header h1 {      
-      color: var(--color);
-      font-size: 36px;
-    }
-    .addTask{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .addTask button {
-      width: 25%;
-      height: 3rem;
-      margin: 0 auto;
-      border-radius: 50px;
-      color: rgba(255, 255, 255, 0.77);
-      background-color: #553EED;
-    }
-    .listaTasks {
-      display: flex;
-      align-items: center;
-      margin-top: 1.3rem;
-    }
-    .listaTasks ul {
-      width: 80%;
-      margin: 0 auto;
-      background-color:var(--bk_list);
-      border-radius: 20px;
-      padding: 0.5rem;
-    }
-    .listaTasks ul span {
-      color: var(--bk_list_color);
-      font-size: 20px;
-    }
-    .listaTasks ul {
-      display: flex;
-      flex-direction: column;
-    }
-    .seta {
-      width: 18px;
-      height: 9px;
-      background-color: transparent;
-    }
-    .listaTasks ul li button {
-      background-color: transparent
-    }
-    .listaTasks ul li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      word-break: break-word;
-    }
-    .divbuttons{
-      display: flex;
-      flex-direction: row;
-      gap: 0.3rem;
-    }
-    .inputwrapper input {
-      background-color: #eee;
-      border: none;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 1rem;
-      color: lightcoral;
-      box-shadow: 0 0.4rem #dfd9d9;
-      cursor: pointer;
-    }
-    .inputwrapper {
-      margin: 0 auto;
-    }
-    .inputwrapper input:focus {
-      outline-color: lightcoral;
-    }
-    .risco {
-      text-decoration: line-through;
-    }
-    .semrisco{
-      text-decoration: none;
-    }
-
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  font-family: "Holtwood One SC", serif;
+  border: none;
 }
-@media screen and (min-width: 768px) and (max-width:1024px){
-  body{
-    background-color:var(--body_bk);
-    height: 100vh;
-    padding-top: 1rem;
-  }
-    header {
-        text-align: center;
-    }
-    .sessaoheader {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    header h1 {      
-      color: var(--color);
-      font-size: 36px;
-    }
-    .addTask{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    .addTask button {
-      width: 15%;
-      height: 3rem;
-      margin: 0 auto;
-      border-radius: 50px;
-      color: rgba(255, 255, 255, 0.77);
-      background-color: #553EED;
-    }
-    .listaTasks {
-      display: flex;
-      align-items: center;
-      margin-top: 1.3rem;
-    }
-    .listaTasks ul {
-      width: 60%;
-      margin: 0 auto;
-      background-color:var(--bk_list);
-      border-radius: 20px;
-      padding: 0.5rem;
-    }
-    .listaTasks ul span {
-      color: var(--bk_list_color);
-      font-size: 20px;
-    }
-    .listaTasks ul {
-      display: flex;
-      flex-direction: column;
-    }
-    .seta {
-      width: 18px;
-      height: 9px;
-      background-color: transparent;
-    }
-    .listaTasks ul li button {
-      background-color: transparent
-    }
-    .listaTasks ul li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      word-break: break-word;
-    }
-    .divbuttons{
-      display: flex;
-      flex-direction: row;
-      gap: 0.3rem;
-    }
-    .inputwrapper input {
-      background-color: #eee;
-      border: none;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 1rem;
-      color: lightcoral;
-      box-shadow: 0 0.4rem #dfd9d9;
-      cursor: pointer;
-    }
-    .inputwrapper {
-      margin: 0 auto;
-    }
-    .inputwrapper input:focus {
-      outline-color: lightcoral;
-    }
-    .risco {
-      text-decoration: line-through;
-    }
-    .semrisco{
-      text-decoration: none;
-    }
+
+/* change theme*/
+:root {
+  --body_bk: rgb(255, 255, 255);
+  --color: rgb(0, 0, 0);
+  --bk_list: rgb(255, 255, 255);
+  --bk_list_color: rgb(0, 0, 0);
+  --input_BK: rgb(218, 218, 218);
+  --filter: ;
+
+  /* colors of button add*/
+
+  --btn_add_BK: rgb(235, 225, 225);
+  --btn_add_color: rgb(0, 0, 0);
+  --btn_add_BK_style: rgb(0, 0, 0);
+  --btn_add_colorStyle: rgb(255, 255, 255);
 }
-@media screen and (min-width: 1439px){
-  body{
+[theme="dark"] {
+  --body_bk: rgb(0, 0, 0);
+  --color: white;
+  --bk_list: rgb(0, 0, 0);
+  --bk_list_color: rgb(255, 255, 255);
+  --input_BK: rgb(39, 36, 36);
+  --filter: invert();
+
+  /* colors of button add*/
+
+  --btn_add_BK: rgb(19, 19, 19);
+  --btn_add_color: rgb(255, 255, 255);
+  --btn_add_BK_style: rgb(0, 0, 0);
+  --btn_add_colorStyle: rgb(0, 0, 0);
+}
+
+img {
+  filter: var(--filter);
+}
+body {
+  background: var(--body_bk);
+  height: 100vh;
+  padding-top: 1rem;
+}
+.sessaoheader {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+header h1 {
+  color: var(--color);
+  font-size: 36px;
+}
+.addTask {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/*Button add*/
+.OrgButton {
+  text-align: center;
+}
+.comic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--btn_add_color);
+  background-color: var(--btn_add_BK);
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
+  scale: 0.9;
+}
+.comic-button:hover {
+  background-color: var(--btn_add_BK_style);
+  color: var(--body_bk);
+  border: 2px solid #ffffff;
+  box-shadow: 5px 5px 0px #ffffff;
+  scale: 1;
+}
+.comic-button:active {
+  background-color: var(--btn_add_BK);
+  color: var(--btn_add_colorStyle);
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.listaTasks {
+  display: flex;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+.listaTasks ul {
+  width: 30%;
+  margin: 0 auto;
+  background-color: var(--bk_list);
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+.listaTasks ul span {
+  color: var(--bk_list_color);
+  font-size: 20px;
+}
+.listaTasks ul {
+  display: flex;
+  flex-direction: column;
+}
+.seta {
+  width: 18px;
+  height: 9px;
+  background-color: transparent;
+}
+.listaTasks ul li button {
+  background-color: transparent;
+}
+.listaTasks ul li {
+  color: var(--bk_list_color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-word;
+}
+.divbuttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.inputwrapper input {
+  background-color: var(--input_BK);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  color: var(--color);
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+.inputwrapper {
+  margin: 0 auto;
+}
+.inputwrapper input:focus {
+  outline-color: var(--color);
+}
+.risco {
+  text-decoration: line-through;
+}
+.semrisco {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  body {
     background: var(--body_bk);
     height: 100vh;
     padding-top: 1rem;
   }
-    header {
-        text-align: center;
-    }
-    .sessaoheader {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    header h1 {      
-      color: var(--color);
-      font-size: 36px;
-    }
-    .addTask{
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
+  header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .sessaoheader {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header h1 {
+    color: var(--color);
+    font-size: 26px;
+  }
+  .addTask {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .listaTasks {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+  }
+  .listaTasks ul {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--bk_list);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  .listaTasks ul span {
+    color: var(--bk_list_color);
+    font-size: 20px;
+  }
+  .listaTasks ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .seta {
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+  }
+  .listaTasks ul li button {
+    background-color: transparent;
+  }
+  .listaTasks ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+  }
+  .divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .inputwrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: var(--color);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+  .inputwrapper {
+    margin: 0 auto;
+  }
+  .inputwrapper input:focus {
+    outline-color: var(--color);
+  }
+  .risco {
+    text-decoration: line-through;
+  }
+  .semrisco {
+    text-decoration: none;
+  }
 
+  /*Button add*/
+  .OrgButton {
+    text-align: center;
+  }
+  .comicButton {
+    width: 40%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--btn_add_color);
+    background-color: var(--btn_add_BK);
+    border: 2px solid var(--btn_add_color);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px var(--btn_add_color);
+    transition: all 0.3s ease;
+    scale: 0.9;
+  }
+  .comicButton:hover {
+    background-color: var(--btn_add_BK);
+    color: var(--btn_add_color);
+    border: 2px solid var(--btn_add_color);
+    box-shadow: 5px 5px 0px var(--btn_add_color);
+    scale: 1;
+  }
+  .comicButton:active {
+    background-color: #9ccc80;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
 
-    /*Button add*/
-    .OrgButton{
-      text-align: center;
-    }
-    .comicButton {
-      width: 20%;
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      background-color: #ff5252;
-      border: 2px solid #000;
-      border-radius: 10px;
-      box-shadow: 5px 5px 0px #000;
-      transition: all 0.3s ease;
-      scale: 0.9;
-    }
-    .comicButton:hover {
-      background-color: #fff;
-      color: #ff5252;
-      border: 2px solid #ff5252;
-      box-shadow: 5px 5px 0px #ff5252;
-      scale: 1;
-    }
-    .comicButton:active {
-      background-color: #fcf414;
-      box-shadow: none;
-      transform: translateY(4px);
-    }
-  
+  .listaTasks {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+  }
+  .listaTasks ul {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--bk_list);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  .listaTasks ul span {
+    color: var(--bk_list_color);
+    font-size: 20px;
+  }
+  .listaTasks ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .seta {
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+  }
+  .listaTasks ul li button {
+    background-color: transparent;
+  }
+  .listaTasks ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+  }
+  .divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .inputwrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: var(--color);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    width: 80%;
+  }
+  .inputwrapper {
+    text-align: center;
+  }
+  .inputwrapper input:focus {
+    outline-color: var(--color);
+  }
+  .risco {
+    text-decoration: line-through;
+  }
+  .semrisco {
+    text-decoration: none;
+  }
+}
+/*tablet and medium desktop*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: var(--body_bk);
+    height: 100vh;
+    padding-top: 1rem;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    align-items: center;
+  }
+  .sessaoheader {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header h1 {
+    color: var(--color);
+    font-size: 36px;
+  }
+  .addTask {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .listaTasks {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+  }
+  .listaTasks ul {
+    width: 60%;
+    margin: 0 auto;
+    background-color: var(--bk_list);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  .listaTasks ul span {
+    color: var(--bk_list_color);
+    font-size: 20px;
+  }
+  .listaTasks ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .seta {
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+  }
+  .listaTasks ul li button {
+    background-color: transparent;
+  }
+  .listaTasks ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+  }
+  .divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .inputwrapper input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: var(--color);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+  .inputwrapper {
+    margin: 0 auto;
+  }
+  .inputwrapper input:focus {
+    outline-color: var(--color);
+  }
+  .risco {
+    text-decoration: line-through;
+  }
+  .semrisco {
+    text-decoration: none;
+  }
 
-    .listaTasks {
-      display: flex;
-      align-items: center;
-      margin-top: 1.3rem;
-    }
-    .listaTasks ul {
-      width: 50%;
-      margin: 0 auto;
-      background-color: var(--bk_list);
-      border-radius: 20px;
-      padding: 0.5rem;
-    }
-    .listaTasks ul span {
-      color:var(--bk_list_color);
-      font-size: 20px;
-    }
-    .listaTasks ul {
-      display: flex;
-      flex-direction: column;
-    }
-    .seta {
-      width: 18px;
-      height: 9px;
-      background-color: transparent;
-    }
-    .listaTasks ul li button {
-      background-color: transparent
-    }
-    .listaTasks ul li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      word-break: break-word;
-    }
-    .divbuttons{
-      display: flex;
-      flex-direction: row;
-      gap: 0.3rem;
-    }
-    .inputwrapper input {
-      background-color: #eee;
-      border: none;
-      padding: 1rem;
-      font-size: 1rem;
-      border-radius: 1rem;
-      color: lightcoral;
-      box-shadow: 0 0.4rem #dfd9d9;
-      cursor: pointer;
-    }
-    .inputwrapper {
-      margin: 0 auto;
-    }
-    .inputwrapper input:focus {
-      outline-color: lightcoral;
-    }
-    .risco {
-      text-decoration: line-through;
-    }
-    .semrisco{
-      text-decoration: none;
-    }
+  /*Button add*/
+  .OrgButton {
+    text-align: center;
+  }
+  .comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--btn_add_color);
+    background-color: var(--btn_add_BK);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    scale: 0.9;
+  }
+  .comic-button:hover {
+    background-color: var(--btn_add_BK_style);
+    color: var(--body_bk);
+    border: 2px solid #ffffff;
+    box-shadow: 5px 5px 0px #ffffff;
+    scale: 1;
+  }
+  .comic-button:active {
+    background-color: var(--btn_add_BK);
+    color: var(--btn_add_colorStyle);
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+  .listaTasks {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+  }
+  .listaTasks ul {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--bk_list);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  .listaTasks ul span {
+    color: var(--bk_list_color);
+    font-size: 20px;
+  }
+  .listaTasks ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .seta {
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+  }
+  .listaTasks ul li button {
+    background-color: transparent;
+  }
+  .listaTasks ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+  }
+  .divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .inputwrapper input {
+    background-color: var(--input_BK);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: var(--color);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+  .inputwrapper {
+    margin: 0 auto;
+  }
+  .inputwrapper input:focus {
+    outline-color: var(--color);
+  }
+  .risco {
+    text-decoration: line-through;
+  }
+  .semrisco {
+    text-decoration: none;
+  }
+}
+/*Desktop*/
+@media screen and (min-width: 1439px) {
+  body {
+    background: var(--body_bk);
+    height: 100vh;
+    padding-top: 1rem;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    align-items: center;
+  }
+  .sessaoheader {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  header h1 {
+    color: var(--color);
+    font-size: 36px;
+  }
+  .addTask {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /*Button add*/
+  .OrgButton {
+    text-align: center;
+  }
+  .comicButton {
+    width: 20%;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--btn_add_color);
+    background-color: var(--btn_add_BK);
+    border: 2px solid var(--btn_add_color);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px var(--btn_add_color);
+    transition: all 0.3s ease;
+    scale: 0.9;
+  }
+  .comicButton:hover {
+    background-color: var(--btn_add_BK);
+    color: var(--btn_add_color);
+    border: 2px solid var(--btn_add_color);
+    box-shadow: 5px 5px 0px var(--btn_add_color);
+    scale: 1;
+  }
+  .comicButton:active {
+    background-color: #9ccc80;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  .listaTasks {
+    display: flex;
+    align-items: center;
+    margin-top: 1.3rem;
+  }
+  .listaTasks ul {
+    width: 50%;
+    margin: 0 auto;
+    background-color: var(--bk_list);
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  .listaTasks ul span {
+    color: var(--bk_list_color);
+    font-size: 20px;
+  }
+  .listaTasks ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .seta {
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+  }
+  .listaTasks ul li button {
+    background-color: transparent;
+  }
+  .listaTasks ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+  }
+  .divbuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+
+  /*input add*/
+
+  .inputwrapper input {
+    background-color: var(--input_BK);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    color: var(--color);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+  .inputwrapper {
+    margin: 0 auto;
+  }
+  .inputwrapper input:focus {
+    outline-color: var(--color);
+  }
+  .risco {
+    text-decoration: line-through;
+  }
+  .semrisco {
+    text-decoration: none;
+  }
 }
